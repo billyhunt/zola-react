@@ -9,7 +9,7 @@ class CategoryRadio extends Component {
         <div key={index} className="radio">
           <label>
             <input type="radio" value="category" onChange={() => this.props.setCategoryFilter(category)} checked={this.props.categoryFilter === category} />
-            <span class="label">{category}</span>
+            <span className="label">{category}</span>
           </label>
         </div>
       );
