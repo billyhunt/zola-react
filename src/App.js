@@ -16,19 +16,24 @@ class App extends Component {
 
   }
 
+  //The original data set with an index added to allow the return to the "Featured" sort method.  Which sorts by
+  //the original data sequence
   originalItemSort = data.map((item, index) => {
     item['index'] = index;
     return item;
   });
 
+  //Category Filter set in the Category Radio component.  Categories are defined in the data.
   setCategoryFilter = (categoryFilter) => {
     this.setState({categoryFilter: categoryFilter})
   };
 
+  //Sort Option set in the Sort Select Component.  Sort method is hard coded.
   setSortOption = (event) => {
     this.setState({sortOption: event.target.value});
   };
 
+  //Sort available options based on sort method selected in SortSelect
   sortGrid = (sortOption, originalItemSort) => {
     //Original sorting of grid
     if (sortOption === 'Featured') {
@@ -52,6 +57,7 @@ class App extends Component {
     }
   };
 
+  //Background colors are definited by Priority
   backgroundColor = (priority) => {
     if (priority === 1) {
       return 'Orange'
@@ -78,6 +84,7 @@ class App extends Component {
       }
     }
 
+    //Sort grid items based on this.state.sortOption, which is set in SortSelect
     const sortedItems = this.sortGrid(this.state.sortOption, this.originalItemSort);
     const gridItems = sortedItems.map((item, index) => {
       return (this.state.categoryFilter === item.category || this.state.categoryFilter === 'all') ?

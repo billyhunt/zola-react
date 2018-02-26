@@ -1,7 +1,7 @@
-
 import React, { Component } from 'react';
-import './App.css';
+import './CategoryRadio.css'
 
+//Radio Button to Select Categories
 class CategoryRadio extends Component {
 
   render() {
@@ -9,7 +9,7 @@ class CategoryRadio extends Component {
         <div key={index} className="radio">
           <label>
             <input type="radio" value="category" onChange={() => this.props.setCategoryFilter(category)} checked={this.props.categoryFilter === category} />
-            {category}
+            <span class="label">{category}</span>
           </label>
         </div>
       );
