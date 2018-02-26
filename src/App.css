@@ -1,0 +1,39 @@
+.App-header {
+  background-color: #222;
+  height: 100px;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-h1 {
+  text-align: center;
+}
+
+.App-grid-item {
+  margin: 20px;
+  width: 150px;
+  height: 150px;
+  float: left;
+  border:1px solid black;
+  text-align: center;
+}
+
+.App-h2 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.App-age {
+  font-size: 12px;
+  font-style: italic;
+}
+
+.App-category {
+  font-size: 12px;
+  font-style: normal;
+}
